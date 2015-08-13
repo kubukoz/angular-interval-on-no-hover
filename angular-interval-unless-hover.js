@@ -1,11 +1,11 @@
-angular.module("kzIntervalUnlessHover", []).directive("intervalUnlessHover", function($interval){
+angular.module("kzIntervalUnlessHover", []).directive("kzIntervalUnlessHover", function($interval){
     return {
-        scope: {intervalUnlessHover: "=", interval: "="},
+        scope: {kzIntervalUnlessHover: "=", interval: "="},
         link: function(scope, elem){
             var promise;
             var start = function(){
                 if(promise == null) promise = $interval(function(){
-                    scope.intervalUnlessHover && scope.intervalUnlessHover();
+                    scope.kzIntervalUnlessHover && scope.kzIntervalUnlessHover();
                 }, scope.interval || 1000)
             };
             var stop = function(){
