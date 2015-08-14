@@ -1,6 +1,6 @@
 angular.module("kzIntervalUnlessHover", []).directive("kzIntervalUnlessHover", function($interval){
     return {
-        scope: {kzIntervalUnlessHover: "=", interval: "="},
+        scope: {kzIntervalUnlessHover: "=", interval: "=kzInterval"},
         link: function(scope, elem){
             var promise;
             var start = function(){
